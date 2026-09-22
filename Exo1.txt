@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package exo1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author balla
+ */
+public class Exo1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Bonjour");
+        
+        String prenom;
+        Scanner sc;
+        
+        /** Création du scanner  */
+        
+        sc = new Scanner(System.in);
+        
+        /** Affichage demandant à l'utilisateur d'indiquer son prénom  */
+       
+        System.out.println("Bonjour, veuillez indiquer votre prenom : ");
+        
+         /** Input de l'utilisateur */
+         
+        prenom = sc.nextLine();
+        
+        /** Affichage du prénom de l'utilisateur après sa saisie */
+           
+        System.out.println("Bonjour, " + prenom);
+        
+         /** Ajout du message aurevoir */
+         
+         System.out.println("Au revoir !");
+        
+                    
+    }
+    
+}
