@@ -1,0 +1,79 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package calculator;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author balla
+ */
+public class Calculator {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        /** Déclartion des variables */
+        
+        Scanner sc;
+        
+        int operateur;
+        float operande1;
+        float operande2;
+          
+        /** Demande à l'utilisateur 3 input, l'opération, le premier nombre et le deuxième */
+        
+        System.out.println("Please enter the operator \n 1) add \n 2) substract \n 3) multiply \n 4) divide \n 5) modulo ");
+        sc = new Scanner(System.in);
+        
+        operateur = sc.nextInt();
+        
+        
+        /** Test de l'opérateur erroné avant de demander les opérandes */
+        
+        if (operateur < 1|| operateur > 5) {
+            System.out.println("Veui1lez choisir un nombre entre 1 et 5");
+            System.exit(0);
+        }
+        
+        System.out.println("Please enter the first number");
+                 
+        operande1 = sc.nextFloat();
+        
+         System.out.println("Please enter the second number");
+        
+        operande2 = sc.nextFloat();
+        
+        /** Création d'un switch case afin d'afficher le resultat en fonction du choix de l'utilisateur */
+        /** Affiche le résultat directement de l'operation choisie avec une concaténation pour qu'elle soit sur la même ligne */
+        
+        switch(operateur){
+            case 1:
+            System.out.println("The result is : " + (operande1 + operande2));
+            break;
+            case 2:
+            System.out.println("The result is : "  + (operande1 - operande2));
+            break;
+
+            case 3:
+            System.out.println("The result is : " + (operande1 * operande2));
+            break;
+            
+            case 4:
+            System.out.println("The result is : " + (operande1 / operande2));
+            break;
+            
+            case 5:
+            System.out.println("The result is : " + (operande1 % operande2));    
+            break;
+            
+            default :
+            System.err.println("Vous n'avez pas saisi un nombre entre 1 et 5");
+ 
+        }
+    }    
+}
